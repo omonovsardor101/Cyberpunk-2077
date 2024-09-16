@@ -1,0 +1,894 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Archangelsk";
+    src: url("../fonts/Archangelsk.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("../fonts/Roboto-Bold.ttf");
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    height: auto;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1280px;
+    margin-inline: auto;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.title {
+    font-family: "Archangelsk", sans-serif;
+    font-size: 62px;
+    line-height: 63px;
+}
+
+.text {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 34px;
+}
+
+.bold-text {
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: 18px;
+    line-height: 34px;
+    color: #52BEDC;
+}
+
+.extrabold-text {
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    color: #52BEDC;
+}
+
+.btn {
+    font-family: "Roboto-Bold", sans-serif;
+    padding: 19px 50px;
+    background-color: #000;
+    color: #F8F200;
+    border: 0;
+    outline: none;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+.header {
+    width: 100%;
+    height: 1000px;
+    background-image: url("../images/desktop/main-bg-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: background-image .4s ease-in-out;
+}
+
+.header .container {
+    position: relative;
+    height: 100%;
+}
+
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {}
+
+.yellow-box {
+    background-color: #F8F200;
+    color: #000;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 70px;
+
+    clip-path: polygon(10% 0, 0 17%, 0 50%, 0% 80%, 0 100%, 48% 100%, 90% 100%, 100% 82%, 100% 50%, 100% 20%, 100% 0, 49% 0);
+}
+
+.yellow-box .title {
+    max-width: 484px;
+    margin-bottom: 25px;
+}
+
+.night-city {
+    padding: 70px;
+    margin-bottom: 70px;
+}
+
+.night-city .container .title {
+    margin-bottom: 25px;
+}
+
+.night-city .container .text {
+    width: 952px;
+    margin-bottom: 70px;
+}
+
+.night-city-images {
+    display: flex;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 32px;
+}
+
+.left img {
+    clip-path: polygon(13% 0, 0 27%, 0 100%, 87% 100%, 100% 71%, 100% 0);
+}
+
+.right img {
+    height: 100%;
+    clip-path: polygon(9% 0, 0 16%, 0 100%, 91% 100%, 100% 83%, 100% 0);
+}
+
+
+.play-win {
+    background-color: #000;
+    color: #fff;
+}
+
+.play-win-box {
+    padding: 15px 0 70px;
+    position: relative;
+}
+
+.sale {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.sale img {
+    margin-right: 32px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.text.sale-text {
+    width: 952px;
+    margin-bottom: 98px;
+}
+
+.sale-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.form-input {
+    background: transparent;
+    border: 0;
+    outline: none;
+    width: 460px;
+    border-bottom: 1px solid #777777;
+    margin-bottom: 35px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 21px;
+    padding-bottom: 13px;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+.submit-btn {
+    background-color: #F8F200;
+    color: #000;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 15px;
+}
+
+
+.checkbox-box {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-box label {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 300;
+    margin-left: 13px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 1px;
+    border: 1px solid #eeeeee;
+    border-radius: 0;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    clip-path: polygon(19% 32%, 50% 58%, 89% 8%, 99% 15%, 51% 78%, 10% 41%);
+    transform: scale(0);
+    background-color: #F8F200;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.form-file {
+    display: none;
+}
+
+.form-file-upload {
+    border: 1px dashed #fff;
+    padding: 39px 0;
+    text-align: center;
+    width: 460px;
+    margin-bottom: 35px;
+}
+
+.file-upload-title span {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 7px;
+}
+
+.allowed-files span {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 14px;
+}
+
+.right-content {
+    position: absolute;
+    right: 0px;
+    top: 288px;
+}
+
+.prizes {
+    display: flex;
+    padding: 25px 0 80px 164px;
+
+}
+
+.xbox,
+.playstation {
+    position: relative;
+}
+
+.prize-line-1,
+.prize-line-2 {
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+
+}
+
+.prize-line-1 {
+    left: -730px;
+}
+
+.prize-line-2 {
+    left: -390px;
+}
+
+.xbox-img,
+.playstation-img {
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    width: 296px;
+    height: 351px;
+    z-index: 9999;
+    z-index: 1;
+}
+
+.xbox-img {
+    left: -570px;
+}
+
+.playstation-img {
+    left: -230px;
+}
+
+.top-line {
+    user-select: none;
+    pointer-events: none;
+}
+
+.top-line img {
+    width: 100%;
+}
+
+.hp {
+    background-color: #F8F200;
+}
+
+.hp-top {
+    pointer-events: none;
+    user-select: none;
+}
+
+.hp-top img {
+    width: 100%;
+}
+
+.hp-box {
+    padding: 70px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.hp-img {
+    margin-bottom: 26px;
+}
+
+.hp-left-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.hp-right .title,
+.hp-right .text {
+    margin-bottom: 25px;
+}
+
+.hp-list-item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.hp-list-item span {
+    font-size: 18px;
+    line-height: 21px;
+    margin-left: 10px;
+}
+
+.hp-list-item:last-child {
+    margin-bottom: 40px;
+}
+
+.btn-medium {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+
+.buy-game {
+    background-color: #000;
+    color: #fff;
+    position: relative;
+}
+
+.buy-game-box {
+    display: flex;
+}
+
+.buy-game-image,
+.buy-game-info {
+    width: 50%;
+}
+
+.buy-game-info {
+    padding: 70px 0 70px 32px;
+}
+
+.buy-game-info .title {
+    margin-bottom: 25px;
+    width: 624px;
+}
+
+.buy-game-title {
+    margin-bottom: 15px;
+}
+
+.buy-list-item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.buy-list-item span {
+    font-size: 18px;
+    line-height: 21px;
+    margin-left: 12px;
+}
+
+
+.buy-list-item:last-child {
+    margin-bottom: 70px;
+}
+
+
+.platforms {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.platforms-top,
+.platforms-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy-game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 0;
+}
+
+.logos {
+    display: flex;
+    gap: 32px;
+}
+
+.license {
+    display: flex;
+    gap: 32px;
+}
+
+.license a {
+    line-height: 21px;
+    text-decoration: none;
+    color: #000;
+}
+
+.bottom-footer {
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+    padding: 13px 0;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .night-city-images {
+        flex-direction: column;
+    }
+
+    .left {
+        flex-direction: row;
+        margin-right: 0;
+        margin-bottom: 32px;
+    }
+
+    .left img {
+        width: 48%;
+    }
+
+    .right img {
+        width: 100%;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .night-city .container .text {
+        width: 90%;
+    }
+
+    .play-win-box {
+        display: flex;
+    }
+
+    .left-content {
+        width: 50%;
+    }
+
+    .right-content {
+        width: 50%;
+        position: static;
+    }
+
+    .prizes {
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prize-line-1,
+    .prize-line-2 {
+        left: -200px;
+    }
+
+    .prize-line-2 {
+        top: 400px;
+    }
+
+    .xbox-img,
+    .playstation-img {
+        left: -40px;
+    }
+
+    .playstation-img {
+        top: 400px;
+    }
+
+    .text.sale-text {
+        width: 90%;
+    }
+
+    .sale {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sale img {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+
+    .hp-left-bottom {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 230px;
+    }
+
+    .hp-img img {
+        width: 460px;
+        height: 317px;
+    }
+
+
+}
+
+@media only screen and (max-width: 1024px) {
+    .header {
+        background-image: url("../images/laptop/main-bg-1.png");
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .header-box {
+        flex-direction: column;
+    }
+
+    .header-logo {
+        margin-bottom: 10px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .night-city {
+        padding: 70px 0 0 0;
+    }
+
+    .night-city .container .text,
+    .night-city .container .title {
+        padding: 0 12px;
+    }
+
+    .play-win-box {
+        flex-direction: column-reverse;
+    }
+
+    .prizes {
+        flex-direction: row;
+    }
+
+    .right-content,
+    .left-content {
+        width: 100%;
+    }
+
+    .right-content {
+        height: 250px;
+    }
+
+    .left-content {
+        padding: 0 12px;
+    }
+
+    .sale img {
+        width: 102px;
+        height: 102px;
+        position: absolute;
+        top: 20px;
+    }
+
+    .prize-line-1,
+    .prize-line-2 {
+        width: 192px;
+        height: 190.8px;
+        left: 0;
+        top: 70px;
+    }
+
+    .prize-line-1 {
+        left: 130px;
+    }
+
+    .prize-line-2 {
+        left: 340px;
+    }
+
+    .xbox-img,
+    .playstation-img {
+        left: 0;
+        top: 70px;
+        width: 135px;
+        height: 150.7px;
+    }
+
+    .xbox-img {
+        left: 180px;
+    }
+
+    .playstation-img {
+        left: 400px;
+    }
+
+    .text.sale-text {
+        width: 90%;
+    }
+
+    .hp-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hp-left-bottom {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hp-img img {
+        width: 500px;
+        height: 357px;
+    }
+
+    .hp-right {
+        padding: 0 12px;
+    }
+
+    .buy-game-box {
+        flex-direction: column;
+    }
+
+    .buy-game-image,
+    .buy-game-info {
+        width: 100%;
+    }
+
+    .footer .container {
+        flex-direction: column;
+    }
+
+    .logos {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        margin-bottom: 25px;
+    }
+
+    .license {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 25px 0;
+        width: 100%;
+        background-color: #E6E6E6;
+    }
+
+    .footer .container {
+        padding: 13px 0 0;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    .title {
+        font-size: 30px;
+        line-height: 30.6px;
+    }
+
+    .yellow-box {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .btn {
+        font-size: 20px;
+    }
+
+    .nav-link a img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .header-box {
+        padding: 20px 12px 0;
+    }
+
+    .nav {
+        gap: 30px;
+    }
+
+    .text {
+        font-size: 16px;
+        line-height: 32px;
+    }
+
+
+    .left {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .left img {
+        width: 100%;
+        margin-bottom: 32px;
+        clip-path: polygon(19% 0, 0 27%, 0 100%, 82% 100%, 100% 72%, 100% 0);
+    }
+
+    .right img {
+        clip-path: polygon(17% 0, 0 12%, 0 100%, 82% 100%, 100% 87%, 100% 0);
+    }
+
+    .sale img {
+        top: 10px;
+        width: 62px;
+        height: 62px;
+        object-fit: cover;
+    }
+
+    .xbox-img,
+    .playstation-img {
+        width: 85px;
+        height: 100.7px;
+        top: 50px;
+    }
+
+    .prize-line-1,
+    .prize-line-2 {
+        width: 132px;
+        height: 130.7px;
+        top: 50px;
+    }
+
+    .right-content {
+        height: 180px;
+    }
+
+    .prize-line-1 {
+        left: 20px;
+    }
+
+    .prize-line-2 {
+        left: 120px;
+    }
+
+    .xbox-img {
+        left: 60px;
+    }
+
+    .playstation-img {
+        left: 170px;
+    }
+
+    .form-input,
+    .form-file-upload {
+        width: 95%;
+    }
+
+    .hp-left {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .hp-img img {
+        width: 90%;
+        height: auto;
+    }
+
+    .hp-left-bottom {
+        justify-content: space-evenly;
+        height: auto;
+    }
+
+    .hp-logo a img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .x-sign a img {
+        width: 50px;
+        height: 10.5px;
+    }
+
+    .main-logo a img {
+        width: 175px;
+        height: 44px;
+    }
+
+    .buy-game-info {
+        padding: 40px 12px;
+    }
+
+    .buy-game-info .title {
+        width: 100%;
+    }
+
+    .platforms {
+        width: 296px;
+    }
+
+    .hp-box {
+        gap: 0;
+    }
+
+    .form-input,
+    .file-upload-title span,
+    .submit-btn {
+        font-size: 16px;
+        line-height: 18.75px;
+    }
+}

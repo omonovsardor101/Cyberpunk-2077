@@ -1,4 +1,4 @@
-# 👾Cyberpunk 2077 Landing Page
+# 👾Cyberpunk 2077 Responsive Landing Page
 
 **Links**
 - [Figma Design](https://www.figma.com/design/cyOuCcxqhxwqCrillGbcFm/Cyberpunk?node-id=0-1)
